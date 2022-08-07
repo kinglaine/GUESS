@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="game">
+        <section id="description">
+            <h1 id="gameTitle">GUESS MY NUMBER</h1>
+            <h4 id="gameDescription">Guess the number between 1 and 100</h4>
+        </section>
+        <div class="playerInfo">
+            <div id="playerScore">
+                <p>Score: <span id="score">10</span></p>
+                <p>High Score: <span id="highestScore">0</span></p>
+            </div>
+            <button id="resetButton">Reset</button>
+            <div class="playArea">
+                <div id="interact">
+                    <img id="askPicture" src="ask.png">
+                    <section class="play">
+                        <td><input id="input"  placeholder="Guess a number"></td>
+                        <button id="check">Check</button>
+                    </section>
+                    <p id="error">Guess a Number</p>
+                </div>
+            </div>
+            <div id="loseGame">
+                <img id= "gameOver" src="gameOver.png">
+                <section>
+                    <p id="p1">Unfortunately You lost the Game</p>
+                    <p id="p2">Don't give up and Try Again. You can win next time.</p>
+                    <p id="p3">My number was:<span id="secretNumber"> 66</span></p>
+                </section>
+                <button id="tryAgain">Try Again</button>
+            </div>
+            <div id="congrats">
+                <div id="winGame">
+                    <img id= "trophy" src="trophy.png">
+                    <section>
+                        <p id="p1">Congratulation</p>
+                        <p id="p2">Your Guess was correct. <span id="winGuess"> 41</span> is my secret number.</p>
+                        <p id="p3">Your Score: <span id="winningScore">6</span></p>
+                        <p id="Best">Best: <span id="best">3</span></p>
+                    </section>
+                    <button id="playAgain">Play Again</button>
+                </div>
+        </div>
+        <div class="guessHistory">
+            <h4>Guess History</h4>
+            <ul id="guessList">
+            </ul>
+        </div>  
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
