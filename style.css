@@ -210,7 +210,7 @@ body{
     padding-top: 3%;
 }
 
-@media screen and (max-device-width: 500px) {
+@media screen and (max-device-width: 700px) {
     #playerScore{
         font-size: small;
         line-height: 50%;
@@ -229,6 +229,96 @@ body{
         width: fit-content;
     }
     #askPicture{
-        margin-left: 10%;
+        margin-left: 8%;
+    }
+    #gameTitle{
+        font-size: small;
+    }
+    #gameDescription{
+        font-size: small;
+    }
+}
+@media screen and (max-device-width: 650px) {
+    #playerScore{
+        font-size: small;
+        line-height: 50%;
+        margin-left: 5%;
+    }
+
+    #interact{
+        padding-top: 20%;
+    }
+
+    .playerInfo{
+        width: 97%;
+        padding-left: 0%;
+    }
+    #input{
+        width: fit-content;
+    }
+    #askPicture{
+        margin-left: 4%;
+    }
+    #gameTitle{
+        font-size: small;
+    }
+    #gameDescription{
+        font-size: small;
+    }
+}
+@media screen and (max-device-width: 698px) {
+    #playerScore{
+        font-size: small;
+        line-height: 50%;
+        margin-left: 5%;
+    }
+
+    #interact{
+        padding-top: 20%;
+    }
+
+    .playerInfo{
+        width: 97%;
+        padding-left: 0%;
+    }
+    #input{
+        width: fit-content;
+    }
+    #askPicture{
+        margin-left: 4%;
+    }
+    #gameTitle{
+        font-size: small;
+    }
+    #gameDescription{
+        font-size: small;
+    }
+}
+@media screen and (max-device-width: 900px) {
+    #playerScore{
+        font-size: small;
+        line-height: 50%;
+        margin-left: 5%;
+    }
+
+    #interact{
+        padding-top: 20%;
+    }
+
+    .playerInfo{
+        width: 97%;
+        padding-left: 0%;
+    }
+    #input{
+        width: fit-content;
+    }
+    #askPicture{
+        margin-left: 4%;
+    }
+    #gameTitle{
+        font-size: small;
+    }
+    #gameDescription{
+        font-size: small;
     }
 }
