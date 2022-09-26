@@ -10,9 +10,11 @@ let guessHistory = [];
 let list;
 let guessList;
 //create function to check for answer
+
 document.getElementById("check").addEventListener("click", checkAnswer);
 function checkAnswer(){
     let input = document.getElementById("input").value;
+    document.getElementById("input").focus();
     if(guessHistory.includes(input)){
         let error = document.getElementById("error");
         error.style.display = 'block';
@@ -45,25 +47,24 @@ function checkAnswer(){
             error.textContent = 'Guess is too high';
             currentScore = currentScore - 1;
             score.textContent = currentScore;
-        
         }else if (currentScore > 0 && input == generator){
             if(currentScore>highestScore){
                 highestScore = currentScore;
             }
             document.getElementById("highestScore").textContent = highestScore;
-            document.getElementById("interact").style.display = 'none';
+            document.getElementById("playArea").style.display = 'none';
             document.getElementById("congrats").style.display = 'block';
             document.getElementById("winningScore").textContent = currentScore;
             document.getElementById("best").textContent = highestScore;
-            const secretNum = document.getElementById("winGuess").textContent = generator;
+            var secretNum = document.getElementById("winGuess").textContent = generator;
             secretNum = Math.floor(Math.random() * 100) + 1;
         }
-        
+
         if(currentScore == 0){
             document.getElementById("secretNumber").textContent = generator;
-            document.getElementById("interact").style.display = 'none';
+            document.getElementById("playArea").style.display = 'none';
             document.getElementById("resetButton").style.display = 'none';
-            document.getElementById("loseGame").style.display = 'block';
+            document.getElementById("lost").style.display = 'block';
             generator = Math.floor(Math.random() * 100) + 1;
             
         }
@@ -72,7 +73,11 @@ function checkAnswer(){
             score.textContent = currentScore;
         }
     }
-    
+    function ClearFields() {
+
+        document.getElementById("input").value = "";
+   }
+   ClearFields();  
 }
 
 
@@ -83,9 +88,9 @@ function tryAgain(){
     score.textContent = currentScore;
     error.textContent = 'Guess a Number';
     input = document.getElementById("input").value = null;
-    document.getElementById("interact").style.display = 'block';
+    document.getElementById("playArea").style.display = 'block';
     document.getElementById("resetButton").style.display = 'block';
-    document.getElementById("loseGame").style.display = 'none';
+    document.getElementById("lost").style.display = 'none';
     generator = Math.floor(Math.random() * 100) + 1;
     guessHistory = [];
     document.getElementById("guessList").textContent = "";
@@ -96,7 +101,7 @@ function playAgain(){
     score.textContent = currentScore;
     error.textContent = 'Guess a Number';
     input = document.getElementById("input").value = null;
-    document.getElementById("interact").style.display = 'block';
+    document.getElementById("playArea").style.display = 'block';
     document.getElementById("congrats").style.display = 'none';
     generator = Math.floor(Math.random() * 100) + 1;
     guessHistory = [];
@@ -111,9 +116,9 @@ function reset(){
     input = document.getElementById("input").value = null;
     highestScore = 0;
     document.getElementById("highestScore").textContent = highestScore;
-    document.getElementById("interact").style.display = 'block';
+    document.getElementById("playArea").style.display = 'block';
     document.getElementById("congrats").style.display = 'none';
-    document.getElementById("loseGame").style.display = 'none';
+    document.getElementById("lost").style.display = 'none';
     generator = Math.floor(Math.random() * 100) + 1;
     guessHistory = [];
     document.getElementById("guessList").textContent = "";

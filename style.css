@@ -1,7 +1,5 @@
 body{
     background-color: aqua;
-    display: flex;
-    justify-content: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .game{
@@ -12,15 +10,18 @@ body{
     line-height: 10%;
 }
 #description h1{
+    text-align: center;
     text-shadow: 2px 2px pink;
 }
 .playerInfo{
     display: table;
     background-color:beige;
-    width: 750px;
-    height: 650px;
+    width: 50%;
+    height: fit-content;
     border-radius: 10px;
     padding: 10px;
+    margin-left:auto; 
+    margin-right:auto;
 }
 #playerScore{
     background-color: pink;
@@ -36,20 +37,29 @@ body{
 #resetButton{
     visibility: visible;
     background-color: pink;
-    width: 80px;
+    width: 100px;
     height: 40px;
     font-weight: bold;
     border-radius: 10px;
     border: none;
     float: right;
     position: relative;
-    margin-top: -7%;
+    margin-top: 1.5%;
     cursor: pointer;
+    overflow: auto;
+    margin-left: 20%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+#playerInfos{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
 .playArea{
+    display: block;
     background-color: #deb887;
-    width: 600px;
+    width: 80%;
     height: 450px;
     border-radius: 10px;
     position: relative;
@@ -64,7 +74,7 @@ body{
     bottom: -5%;
     min-height: 50px;
     height: auto;
-    width: 400px;
+    width: 50%;
     border-radius: 10px;
     text-align: left;
     padding-left: 3%;
@@ -78,28 +88,23 @@ body{
 }
 #interact{
     padding-top: 20%;
-    text-align: center;
     display: block;
 }
 
 #askPicture{
-    height: 60px;
-    width: 70px;
+    margin-left: 3%;
     color: bisque;
-    margin-left: 5%;
-
 }
 #input{
-    display: block;
+    text-align: center;
     background-color: antiquewhite;
-    margin-top: 5%;
-    height: 40px;
+    margin-top: 1%;
+    width: 30%;
+    height: 30px;
     border-radius: 25px;
     border: none;
     text-align: center;
     color: grey;
-    margin-left: 38%;
-    margin-right: 35%;
 
 }
 
@@ -120,17 +125,32 @@ body{
    text-align: center;
 }
 
-#loseGame{
-    text-align: center;
+#lost{
+    background-color:  #deb887;
+    width: 80%;
+    height: 450px;
     display: none;
     position: relative;
-    margin-top: -50%;
+    left: 10%;
+    margin-top: 1%;
+    text-align: center;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+
+
 }
-#loseGame #p1{
+
+#loseGame{
+    text-align: center;
+    display: block;
+    position: relative;
+    padding-top: 15%;
+}
+#lost #p1{
     color: rgb(10, 94, 10);
     font-size: medium;
 }
-#loseGame #p2, #p3{
+#lost #p2, #p3{
     font-size: small;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -152,12 +172,12 @@ body{
 }
 #congrats{
     background-color:rgba(138, 204, 138, 0.966);
-    width: 600px;
+    width: 80%;
     height: 450px;
     border-radius: 10px;
     position: relative;
     left: 10%;
-    margin-top: -60%;
+    margin-top: 2%;
     display: none;
     text-align: center;
     justify-content: center;
@@ -188,4 +208,27 @@ body{
 
 .guessHistory h4{
     padding-top: 3%;
+}
+
+@media screen and (max-device-width: 500px) {
+    #playerScore{
+        font-size: small;
+        line-height: 50%;
+        margin-left: 5%;
+    }
+
+    #interact{
+        padding-top: 50%;
+    }
+
+    .playerInfo{
+        width: 97%;
+        padding-left: 0%;
+    }
+    #input{
+        width: fit-content;
+    }
+    #askPicture{
+        margin-left: 10%;
+    }
 }
