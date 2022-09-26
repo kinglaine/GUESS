@@ -1,4 +1,8 @@
-# GUESS
-# Warning! Not responsive to mobile...
-# LINK: https://kinglaine.github.io/GUESS/
-![Preview](https://user-images.githubusercontent.com/72886722/183312639-08ba12dd-6786-497b-a3e0-b8b90b1cf22d.png)
+### GUESS
+## Responsive 
+### LINK: https://kinglaine.github.io/GUESS/
+<p align="center">
+Preview
+</p>
+
+![Play](https://user-images.githubusercontent.com/72886722/192369332-14952233-74b9-4a90-9733-54cffba2e35f.png)
